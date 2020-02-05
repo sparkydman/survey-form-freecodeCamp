@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+*,
+*::before,
+*::after {
+  padding: 0px;
+  marging: 0px;
+}
+body {
+  font-family: Roboto, sans-serif;
+}
+#overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(90, 214, 81, 0.4);
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+#overlay::before {
+  content: "";
+  background: url(https://cdn.stocksnap.io/img-thumbs/960w/IX9Z71L6PD.jpg)
+    no-repeat center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#container {
+  width: 60%;
+  margin: 25px auto;
+  color: #ffffff;
+  z-index: 1000;
+}
+#title,
+#description {
+  height: 10px;
+  text-align: center;
+  display: block;
+  line-height: 30px;
+}
+#title {
+  padding-top: 50px;
+}
+#description {
+  padding-bottom: 30px;
+  padding-top: 8px;
+  font-style: italic;
+}
+form {
+  background: #1b5e20;
+  border-radius: 5px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+.field {
+  height: 2rem;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 0 5px;
+  font-size: 0.8em;
+  font-family: Arial;
+}
+.label-top {
+  padding: 10px 0;
+}
+.options {
+  display: flex;
+}
+textarea {
+  font-size: 1em;
+}
+#submit {
+  height: 40px;
+  margin: 20px 0;
+  background-color: #ffff00;
+  border: 0;
+  color: #000;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  #container {
+    width: 98%;
+  }
+  #title {
+    font-size: 20px;
+  }
+  #description {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #title {
+    font-size: 25px;
+  }
+}
